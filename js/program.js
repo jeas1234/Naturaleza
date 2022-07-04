@@ -9,7 +9,7 @@ $(document).ready(function () {
 
 
   //post
-
+  if(window.location.href.indexOf("index") > -1){
   var posts = [
     {
       title: "prueba de titulo1",
@@ -44,7 +44,7 @@ $(document).ready(function () {
     },
 
   ]
-
+  
   posts.forEach((item, index) => {
     var post = `
 
@@ -57,7 +57,7 @@ $(document).ready(function () {
 
     $("#post").append(post)
   });
-
+  }
   // Reloj
   if(window.location.href.indexOf("reloj") > -1){
   var hora = moment().format("hh:mm:ss");
@@ -95,7 +95,7 @@ $(document).ready(function () {
 
 
   //  Guardar datos en el localStorage de inicio y cierre de session
-
+  if(window.location.href.indexOf("reloj") > -1){
   $("form").submit(function () {
     var formNombre = $("#formNombre").val();
 
@@ -116,10 +116,10 @@ $(document).ready(function () {
     })
 
   }
-
+  }
   // Acordion para about
 
-
+  if(window.location.href.indexOf("about") > -1)
   $("#acordion").accordion();
 
 
